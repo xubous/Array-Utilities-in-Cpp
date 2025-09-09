@@ -15,8 +15,7 @@ Features
 
     Statistical calculations
 
-API Reference
-Core Methods
+API Reference / Core Methods :
 
     addAllValues() - Sums all values in the array
 
@@ -33,3 +32,6 @@ Core Methods
     print() - Displays array contents
 
     freeArray() - Releases allocated memory
+
+Compilation 
+    g++ -std=c++11 main.cpp array.cpp -o array_program

@@ -1,2 +1,2 @@
-# int_Array_Functions
-A lightweight C++ library providing essential functions for array manipulation. Includes sorting, searching, and utility operations with clean, efficient code.
+# Array-Utilities-C++
+A C++ library implementing a dynamic array using a doubly-linked list structure. This implementation provides efficient memory management and various utility operations.

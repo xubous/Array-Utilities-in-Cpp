@@ -34,6 +34,8 @@ public:
     int realloc ( int size );
     void modifyCapacity ( int size );
     void addNewCell ( int value );
+    int removeCell ( );
+    int removeCell ( int position );
     void print ( );
     int freeArray ( );
 };

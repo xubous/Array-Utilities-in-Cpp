@@ -29,6 +29,10 @@ API Reference / Core Methods :
 
     addNewCell(int value) - Adds a new element
 
+    removeCell ( ) - Remove last cell
+
+    removeCell ( int position ) - Remove cell in position 
+    
     print() - Displays array contents
 
     freeArray() - Releases allocated memory

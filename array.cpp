@@ -143,6 +143,69 @@ void Array::addNewCell ( int value )
         }
 }
 
+int Array::removeCell ( )
+{
+    if ( head == nullptr || last == head )
+    {
+        std::cout << "Array vazio, não há células para remover!" << '\n';
+        return 1;
+    }
+    
+    Cell * cellToRemove = last;
+    last = last -> previous;
+    last -> next = nullptr;
+    
+    delete cellToRemove;
+    lenght --;
+    
+    std::cout << "Última célula removida com sucesso!" << '\n';
+
+    return 0;
+}
+
+int Array::removeCell ( int position )
+{
+        if ( head == nullptr || position < 0 || position >= lenght )
+    {
+        std::cout << "Posição inválida para remoção!" << '\n';
+        return 1;
+    }
+    
+    Cell * current = head -> next;
+    for ( int i = 0; i < position && current != nullptr; i ++ )
+    {
+        current = current -> next;
+    }
+    
+    if ( current == nullptr )
+    {
+        std::cout << "Célula não encontrada na posição " << position << '\n';
+        return 1;
+    }
+    
+    if ( current -> previous != nullptr )
+    {
+        current -> previous -> next = current -> next;
+    }
+    
+    if ( current -> next != nullptr )
+    {
+        current -> next -> previous = current -> previous;
+    }
+    
+    if ( current == last )
+    {
+        last = current -> previous;
+    }
+    
+    delete current;
+    lenght --;
+    
+    std::cout << "Célula na posição " << position << " removida com sucesso!" << '\n';
+
+    return 0;
+}
+
 void Array::print ( )
 {
     if ( head != nullptr )
